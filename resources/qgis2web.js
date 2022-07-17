@@ -230,7 +230,7 @@ var onPointerMove = function(evt) {
                         if (layer.get('fieldImages')[currentFeatureKeys[i]] != "ExternalResource") {
                             popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(currentFeature.get(currentFeatureKeys[i]).toLocaleString()) + '</td>' : '');
                         } else {
-                            popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<a href="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" /" target="blank"><img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" / height="250"></a></td>' : '');
+                            popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<a href="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" /" target="blank"><img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" / width="300"></a></td>' : '');
                         }
                         popupText += '<tr>' + popupField + '</tr>';
                     }
@@ -373,7 +373,7 @@ var onSingleClick = function(evt) {
                             if (layer.get('fieldImages')[currentFeatureKeys[i]] != "ExternalResource") {
                                 popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? autolinker.link(currentFeature.get(currentFeatureKeys[i]).toLocaleString()) + '</td>' : '');
                             } else {
-                                popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim()  + '" /></td>' : '');
+                                popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? '<a href="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" /" target="blank"><img src="images/' + currentFeature.get(currentFeatureKeys[i]).replace(/[\\\/:]/g, '_').trim() + '" / width="300"></a></td>' : '');
                             }
                             popupText += '<tr>' + popupField + '</tr>';
                         }
