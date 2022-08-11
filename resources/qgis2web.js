@@ -113,7 +113,7 @@ map.addControl(layerSwitcher);
 map.getView().fit([125.285120, 2.712911, 125.436995, 2.781996], map.getSize());
 
 var NO_POPUP = 0
-var ALL_FIELDS = 1
+var ALL_FIELDS = 0
 
 /**
  * Returns either NO_POPUP, ALL_FIELDS or the name of a single field to use for
